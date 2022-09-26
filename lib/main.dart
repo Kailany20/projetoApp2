@@ -9,21 +9,20 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
       theme: new ThemeData(
-          scaffoldBackgroundColor: Color.fromARGB(255, 39, 232, 139)),
+        scaffoldBackgroundColor: Color(0xff59e7af),
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/":(context) => Home(),
-        "/login":(context) => Login(),
-        "/cadastre":(context) => Cadastre(),
-        "/telainicial":(context) => TelaInicial(),
-
+        "/": (context) => Home(),
+        "/login": (context) => Login(),
+        "/cadastre": (context) => Cadastre(),
+        "/telainicial": (context) => TelaInicial(),
       },
     );
   }
@@ -78,7 +77,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 primary: Color(0xFFc67c9d),
                 onPrimary: Color.fromARGB(255, 255, 255, 255)),
             onPressed: () {
-             Navigator.pushNamed(context,"/login");
+              Navigator.pushNamed(context, "/login");
             },
             child: Text('Login'),
           ),
@@ -88,7 +87,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               textStyle: const TextStyle(fontSize: 15),
             ),
             onPressed: () {
-              Navigator.pushNamed(context,"/cadastre");
+              Navigator.pushNamed(context, "/cadastre");
             },
             child: const Text('Não é usuário? Cadastre-se.'),
           ),

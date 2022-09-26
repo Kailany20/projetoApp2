@@ -19,7 +19,9 @@ class _CadastreState extends State<Cadastre> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Novo usuário"),
+        title: const Text("Novo Usuário"),
+        centerTitle: true,
+        backgroundColor: Color(0xFFc67c9d),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -59,8 +61,13 @@ class _CadastreState extends State<Cadastre> {
             ),
             TextField(
               controller: emailController,
-              decoration: const InputDecoration(
-                label: Text("Email"),
+              decoration: InputDecoration(
+                label: const Text(
+                  "Email",
+                  ),
+                  labelStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  color: Color(0xFFc67c9d),
+                  ),
                 icon: Icon(
                   Icons.email,
                   color: Color(0xFFc67c9d),
@@ -73,23 +80,14 @@ class _CadastreState extends State<Cadastre> {
               children: [
                 Expanded(
                   child: TextField(
-                    controller: phoneController,
-                    decoration: const InputDecoration(
-                      label: Text("Telefone"),
-                      icon: Icon(
-                        Icons.call,
-                        color: Color(0xFFc67c9d),
-                        size: 32,
-                      ),
-                    ),
-                    keyboardType: TextInputType.phone,
-                  ),
-                ),
-                Expanded(
-                  child: TextField(
                     controller: celController,
-                    decoration: const InputDecoration(
-                      label: Text("Celular"),
+                    decoration:  InputDecoration(
+                      label: Text(
+                        "Celular",
+                        ),
+                         labelStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  color: Color(0xFFc67c9d),
+                  ),
                       icon: Icon(
                         Icons.call,
                         color: Color(0xFFc67c9d),
@@ -104,7 +102,12 @@ class _CadastreState extends State<Cadastre> {
             TextField(
               controller: passwordController,
               decoration: InputDecoration(
-                label: const Text("Senha"),
+                label: const Text(
+                  "Senha",
+                  ),
+                  labelStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  color: Color(0xFFc67c9d),
+                  ),
                 icon: const Icon(
                   Icons.password,
                   color: Color(0xFFc67c9d),
@@ -115,7 +118,8 @@ class _CadastreState extends State<Cadastre> {
                     (_isObscure) ? Icons.visibility : Icons.visibility_off,
                     color: Color(0xFFc67c9d),
                   ),
-                  onPressed: () {
+                  onPressed: (
+                  ) {
                     setState(() {
                       _isObscure = !_isObscure;
                     });

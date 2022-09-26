@@ -15,7 +15,9 @@ class Login extends StatelessWidget {
         margin: const EdgeInsets.all(16),
         child: Column(
           children: [
-            TextField(
+            TextFormField(
+               validator: (text)=> (text!.length < 3)
+              ?"O nome deve conter pelo menos 2 caracteres":null,
               decoration: InputDecoration(
                 label: Text("Usuário"),
                 icon: Icon(
@@ -48,8 +50,12 @@ class Login extends StatelessWidget {
           ),
           ],
         ),
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/fundo.jpeg"),
       ),
-      
+      ),
+      ),
     );
   
   }

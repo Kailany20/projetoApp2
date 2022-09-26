@@ -6,6 +6,12 @@ class TelaInicial extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+       appBar: AppBar(
+         centerTitle: true,
+        backgroundColor: Color(0xFFc67c9d),
+        title: const Text("Help list for mothers"),
+        
+       ),
     );
   }
 }
