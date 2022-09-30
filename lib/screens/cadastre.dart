@@ -26,7 +26,6 @@ class _CadastreState extends State<Cadastre> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           var userName = nameController.text;
-
           if (userName.isNotEmpty) {
             var snack = const SnackBar(
               content: Text("Usuário cadastrado com sucesso!!!"),
@@ -37,6 +36,8 @@ class _CadastreState extends State<Cadastre> {
         child: const Icon(
           Icons.save,
         ),
+        backgroundColor: Color(0xFFc67c9d),
+
       ),
       body: Container(
         margin: const EdgeInsets.all(16),
@@ -131,6 +132,11 @@ class _CadastreState extends State<Cadastre> {
             ),
           ],
         ),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/fundo.jpeg"),
+      ),
+      ),
       ),
     );
   }

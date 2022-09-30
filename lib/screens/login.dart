@@ -19,7 +19,14 @@ class Login extends StatelessWidget {
                validator: (text)=> (text!.length < 3)
               ?"O nome deve conter pelo menos 2 caracteres":null,
               decoration: InputDecoration(
-                label: Text("Usuário"),
+                label: Text(
+                  "Usuário",
+                  ),
+               hintText: "Digite seu usuário",
+
+                labelStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  color: Color(0xFFc67c9d),
+                ),
                 icon: Icon(
                   Icons.person,
                  color: Color(0xFFc67c9d),
@@ -31,7 +38,13 @@ class Login extends StatelessWidget {
               validator: (text)=> (text!.length < 3)
               ?"A senha deve ter ao menos 3 caracters":null,
               decoration: InputDecoration(
-                label: Text("Senha"),
+                label: Text(
+                  "Senha",
+                  ),
+                  hintText: "Digite sua senha",
+                  labelStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  color: Color(0xFFc67c9d),
+                  ),
                 icon: Icon(
                   Icons.key,
                   color: Color(0xFFc67c9d),

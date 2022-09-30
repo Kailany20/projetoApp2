@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_2/screens/cadastre.dart';
+import 'package:projeto_2/screens/favoritos.dart';
 import 'package:projeto_2/screens/login.dart';
 import 'package:projeto_2/screens/tela_inicial.dart';
 
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         "/": (context) => Home(),
         "/login": (context) => Login(),
         "/cadastre": (context) => Cadastre(),
-        "/telainicial": (context) => TelaInicial(),
+        "/telainicial": (context) => HomePage(),
+        "/favoritos":(context) => Favoritos(),
       },
     );
   }
@@ -94,5 +96,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ],
       ),
     );
+
   }
 }
